@@ -1,0 +1,138 @@
+<?include ("top.html")?>
+
+<style>
+  table {
+    border-top: none solid #444444;
+    border-collapse: collapse;
+  }
+  button {
+	  border:none;
+	  background-color : white;
+	  cursor: pointer;
+  }
+  a {text-decoration:none; color:black;}
+  input {border-left:0 solid black; border-right:0 solid black;border-top:0 solid black;
+		border-bottom:2px solid black;}
+  .text1 {COLOR:orange;}
+  .text2 {COLOR:black;}
+  td {align:center;}
+  .sangho { width:100%;
+			height: 220;}
+  .bottom{padding-left:150px;
+		  }
+   .footer {
+
+    position:absolute;
+
+    bottom:0;
+	.wrapper {
+
+	position:relative;
+
+    min-height:100%;
+
+}
+}
+   img{border:none;}
+}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800&display=swap" rel="stylesheet">
+<style>
+.p {
+    font-family:'Outfit', sans-serif;
+	font-weight: 900;
+    }
+.p1 {
+    font-family:'Poor Story', cursive;
+    }
+</style>
+<!doctype html>
+<html lang="UTF-8">
+  <head>
+   
+    <title>Yeongslim</title>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      .jbTitle {
+        text-align: center;
+      }
+      .jbMenu {
+        text-align: center;
+        padding: 10px 0px;
+      }
+      .jbFixed {
+        position: fixed;
+        top: 0px;
+      }
+    </style>
+    <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+      $( document ).ready( function() {
+        var jbOffset = $( '.jbMenu' ).offset();
+        $( window ).scroll( function() {
+          if ( $( document ).scrollTop() > jbOffset.top ) {
+            $( '.jbMenu' ).addClass( 'jbFixed' );
+          }
+          else {
+            $( '.jbMenu' ).removeClass( 'jbFixed' );
+          }
+        });
+      } );
+    </script>
+  </head><script src="https://kit.fontawesome.com/682470664d.js" crossorigin="anonymous"></script>
+<br><br><br><br>
+<table align=center style="border-collapse:collapse; border:2px solid;"><tr><td align=center><font size=3 class='p'>약관동의</font></td></tr>
+<tr>
+<td height=50><font size=2>- 회원가입을 위해 아래 이용약관 및 개인정보 보호정책을 반드시   읽으신 후 동의 여부를 확인해 주십시오.<br>- 회원가입 후 관리자의 승인을 받게되면 본 사이트의 모든 서비스를 사용할 수 있습니다.
+</td>
+</tr>
+<tr>
+<td height=30 valign=bottom align=center><b>[이용약관]</b></td>
+</tr>
+<tr>
+<td height=50 align=center>
+<textarea align=center cols=125 rows=13 readonly="readonly" style="font-size:8pt; font-family:Tahom a;">
+
+제1장  총 칙
+              
+제1조 【목적】
+
+본 약관은 Yeongsfit(이하 &quot;회사&quot;로 표기)가 제공하는 온라인 도서판매 쇼핑몰(이하 &quot;쇼핑몰&quot;로 표기)의 회원 가입에 있어서 회사와 회원간 권리의무에 관한 사항, 서비스 이용조건과 절차 및 기타 필요한 사항을 규정함을 목적으로 합니다.
+
+제2조 【용어의 정의】
+
+본 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+                          :
+
+</textarea>
+</td>
+</tr>
+<tr>
+<td height=40  valign=bottom align=center><font style='text-decoration:none;'><b>[개인정보 보호정책]</b></font></td>
+</tr>
+<tr>
+<td height=50 align=center><textarea align=center cols=90 rows=13 readonly="readonly" style="font- size:8pt; font-family:Tahoma;">
+
+Yeongsfit(이하 &quot;회사&quot;로 표기)는 회원님의 개인 정보 보안을 매우 소중하게 생각하며 '정보통신망이용촉진 등에 관한 법률' 등 모든 관련법규를 준수하고자 몇 가지 개인정보 보호방침을 만들어 준수하고 있습니다.
+                           :
+
+</textarea>
+</td>
+</tr>
+
+	<tr height=50><td><font style='font-size:13pt; font-family:Tahoma;'><b>위의 이용약관과 개인정보 보호 정책에 동의하십니까?  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></font>
+	<a href=join2.html><font style='text-decoration:none;'><b>YES </font></a>&nbsp;|
+	&nbsp;<a href=mainpage.html><font style='text-decoration:none;'>NO</b></font></a></td>
+	</tr>
+	</table>
+<br><br><br><br>
+
+
+<?include ("bottom.html")?>

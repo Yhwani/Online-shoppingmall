@@ -1,0 +1,139 @@
+<style>
+  table {
+    border-top: none solid #444444;
+    border-collapse: collapse;
+  }
+  button {
+	  border:none;
+	  background-color : white;
+	  cursor: pointer;
+  }
+  .a1 {text-decoration:none; color:black;}
+  .input1 {border-left:0 solid black; border-right:0 solid black;border-top:0 solid black;
+		border-bottom:2px solid black;}
+  .text1 {COLOR:orange;}
+  .text2 {COLOR:black;}
+  td {align:center;}
+  .sangho {align:bottom; width:100%;
+			height: 220;}
+  .bottom{padding-left:150px;
+		  }
+   .footer {
+
+    position:absolute;
+
+    bottom:0;
+	.wrapper {
+
+	position:relative;
+
+    min-height:100%;
+
+}
+}
+   img{border:none;}
+}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800&display=swap" rel="stylesheet">
+<style>
+.p {
+    font-family:'Outfit', sans-serif;
+	font-weight: 900;
+    }
+.p1 {
+    font-family:'Poor Story', cursive;
+    }
+</style>
+<!doctype html>
+<html lang=\"UTF-8\">
+  <head>
+   
+    <title>Yeongsfit</title>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      .jbTitle {
+        text-align: center;
+      }
+      .jbMenu {
+        text-align: center;
+        padding: 10px 0px;
+      }
+      .jbFixed {
+        position: fixed;
+        top: 0px;
+      }
+    </style>
+    <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+      $( document ).ready( function() {
+        var jbOffset = $( '.jbMenu' ).offset();
+        $( window ).scroll( function() {
+          if ( $( document ).scrollTop() > jbOffset.top ) {
+            $( '.jbMenu' ).addClass( 'jbFixed' );
+          }
+          else {
+            $( '.jbMenu' ).removeClass( 'jbFixed' );
+          }
+        });
+      } );
+    </script>
+  </head><script src="https://kit.fontawesome.com/682470664d.js" crossorigin="anonymous"></script>
+
+
+<? if (!$UserID) { ?>
+<table border=0 align=center width=1700>
+	<tr><td align=150 align=center><h1 class='p'><a href=mainpage.html class='a1'>Yeongsfit</a></h1></td>
+	<td width=1400 align=center><form method=post action=search.php?code=$code>
+	<input type=text name=key size=45 class='input1'>
+	<button type=submit class='fas fa-search fa-lg'></button></td>
+	<td width=80 align=center><a href=join.html class='fas fa-user-plus fa-lg ,a1'><br><font size=2>JOIN</font></a></td>
+	<td width=80 align=center><a href=login.html class='fas fa-sign-in-alt fa-lg ,a1'><br><font size=2>LOGIN</font></a></td>
+	<td width=80 align=center><a href=login.html class='fas fa-shopping-bag fa-lg ,a1'><br><font size=2>BAG</font></a></td></tr></form></table>
+	<br>
+<?} else if ($UserID == "admin") {  ?> 
+     <table border=0 align=center width=1700>
+	<tr><td align=150 align=center><h1 class='p'><a href=mainpage.html class='a1'>Yeongsfit</a></h1></td>
+	<td width=1400 align=center><form method=post action=search.php?code=$code>
+	<input type=text name=key size=45 class='input1'>
+	<button type=submit class='fas fa-search fa-lg'></button></td></form>
+	<td width=150 align=center><a href=admin.php class='fas fa-star fa-lg ,a1'><font size=2>관리자페이지</font></a><a href=join.html class='fas fa-star fa-lg , a1'></a></td>
+	<td width=80 align=center><a href=logout.php class='fas fa-sign-out-alt fa-lg ,a1'><br><font size=2>LOGOUT</font></a></td></tr></table>
+	<br>
+<? } else { ?>
+
+<table border=0 align=center width=1700>
+	<tr><td align=150 align=center><h1 class='p'><a href=mainpage.html class='a1'>Yeongsfit</a></h1></td>
+	<td width=1400 align=center><form method=post action=search.html?board=$board>
+	<input type=text name=key size=45 class='input1'>
+	<button type=submit class='fas fa-search fa-lg'></button></td>
+	<td width=80 align=center><a href=mypage.php class='far fa-address-card fa-lg ,a1'><br><font size=2>MYPAGE</font></a></td>
+	<td width=80 align=center><a href=logout.php class='fas fa-sign-out-alt fa-lg ,a1'><br><font size=2>LOGOUT</font></a></td>
+	<td width=80 align=center><a href=showbag.php class='fas fa-shopping-bag fa-lg ,a1'><br><font size=2>BAG</font></a></td></tr></form></table>
+	<br>
+
+<? } ?>
+
+
+<table align=center width=1300 bgcolor=white>
+<tr height=30 align=center>
+<td><div class="jbMenu" align=center><a href=p-list1.php class='p ,a1'><b>
+<font size=4 class='text1,text2' onMouseOver="this.className='text1';" onMouseOut="this.className='text2'">NEW</font></b></a></div></td>
+<td><div class="jbMenu" align=center><a href=p-list2.php class='p ,a1'><b>
+<font size=4 class='text1,text2' onMouseOver="this.className='text1';" onMouseOut="this.className='text2'">BEST</font></b></a></div></td>
+<td><div class="jbMenu" align=center><a href=p-list.php?class=1 class='p ,a1'><b>
+<font size=4 class='text1,text2' onMouseOver="this.className='text1';" onMouseOut="this.className='text2'">OUTER</font></b></a></div></td>
+<td><div class="jbMenu" align=center><a href=p-list.php?class=2 class='p ,a1'><b>
+<font size=4 class='text1,text2' onMouseOver="this.className='text1';" onMouseOut="this.className='text2'">TOP</font></b></a></div></td>
+<td><div class="jbMenu" align=center><a href=p-list.php?class=3 class='p ,a1'><b>
+<font size=4 class='text1,text2' onMouseOver="this.className='text1';" onMouseOut="this.className='text2'">PANTS</font></b></a></div></td>
+<td><div class="jbMenu" align=center><a href=p-list.php?class=4 class='p ,a1'><b>
+<font size=4 class='text1,text2' onMouseOver="this.className='text1';" onMouseOut="this.className='text2'">Y.Label</font></b></a></div></td>
+<td><div class="jbMenu" align=center><a href=board.php class='p ,a1'><b>
+<font size=4 class='text1,text2' onMouseOver="this.className='text1';" onMouseOut="this.className='text2'">SERVICE</font></b></a></div></td>
+</div></tr></font></table>

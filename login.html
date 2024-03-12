@@ -1,0 +1,83 @@
+<?include ("top.html")?>
+<? if (!$UserID) { ?>
+<br><br><br><br>
+<!DOCTYPE html>
+<html>
+ 
+<head>
+ 
+<style type="text/css">
+   .topline{border-top:2px solid black;
+   } 
+   .botline{border-bottom:2px solid black; 
+   }
+   .buttonline{border-top:2px solid black; 
+               border-bottom:2px solid black; 
+   }
+ a:visited {text-decoration: none; color: #333333; 
+ }
+ 
+</style>
+<style>
+	.b {background:black;
+		font-size : 5;}
+	.tag {border-left:0 solid black; border-right:0 solid black;border-top:0 solid black;
+		border-bottom:1px solid black;}
+	.tag1 {border-left:0 solid black; border-right:0 solid black;border-top:0 solid black;
+		border-bottom:2px solid black;}
+</style>
+</head>
+ 
+<body>
+ 
+ 
+<h1>  <p align=center>로그인</p> </h1>
+
+<form method='post' action='login.php' onsubmit="if(!this.uid.value || !this.upass.value)   return false;"> 
+    <table align=center border=0 cellspacing=0 width=500 bordercolordark=white bordercolorlight=#999999>
+        <tr> 
+            <td class="topline" width=150>
+                <p align=right>아이디&nbsp;&nbsp;</p>
+            </td>
+            <td class="topline" width=200>
+                <input type="text" name="uid" style="height:25px">
+            </td>
+ 
+            <td class="buttonline" rowspan="2" align=center>
+                <button type="submit" style="height:100px; width:130px" class='tag, b'><font color=white size=3>로그인</font></button>
+            </td>
+ 
+        </tr>
+ 
+        <tr>
+            <td class="botline" width=150> 
+                <p align=right>비밀번호&nbsp;&nbsp;</p>
+            </td>
+ 
+            <td class="botline" width=200>
+                <input type="password" name="upass" style="height:25px">
+            </td>
+ 
+        </tr>
+ 
+        <tr>
+           <td colspan=2 align=center>
+
+              <br><a href="join.html" target="_self" style="text-decoration:none" class='p'>회원가입 하시겠습니까?</a></p> 
+           </td>
+		   <td align=right> <br><a href=findidpw.html class='p'>ID/비밀번호찾기</a>
+		   </td>
+        </tr>
+    </table>
+</form>
+ 
+</body>
+</html>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<? } else { ?>
+
+<meta http-equiv='Refresh' content='0; url=mainpage.html'>
+
+<? } ?>
+
+<?include ("bottom.html")?>
